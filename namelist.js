@@ -63,6 +63,3 @@ class NamesList extends Component {
 }
 
 export default NamesList
-
-//<td>{i}</td><th>Key</th>
-//{NamesData.names.sort((a, b) => b.amount - a.amount).map((item, i) => (
