@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import NamesData from './data/names.json'
 
-  var totalAmount = Object.keys(NamesData.names).length;
-  //console.log(totalAmount);
+  var differentNames = Object.keys(NamesData.names).length;
+  console.log(differentNames);
+  
+  const totalAmount = NamesData.names.reduce((acc, name) => acc + name.amount, 0);
+  console.log(totalAmount);
 
 class NamesList extends Component {
 
@@ -23,7 +26,7 @@ class NamesList extends Component {
              
 			{NamesData.names.sort((a, b) => b.amount - a.amount).map((item, i) => (
 			<tr key={i}>
-			<td>{item.name}</td>
+			 <td>{item.name}</td>
              <td>{item.amount}</td>
 			</tr>
 			))}
@@ -53,6 +56,12 @@ class NamesList extends Component {
 			</tr>
 			<tr>
             <th>{totalAmount}</th>
+            </tr>
+			<tr>
+			<td >Different names</td>
+			</tr>
+			<tr>
+            <th>{differentNames}</th>
             </tr>
 		</tbody>
         </table>
