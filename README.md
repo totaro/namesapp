@@ -9,3 +9,5 @@ The user interface provides following functionality.
     Different names
     
 The data for the application is stored in a json file (names.json).
+
+Methods used: sort(), reduce() and lenght()
